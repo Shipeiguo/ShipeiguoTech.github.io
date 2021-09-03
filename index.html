@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.shipeiguo.com/2021/09/02/example/" data-id="ckt36nuj60000pcuobix0b0ze" data-title="学习笔记" class="article-share-link">分享</a>
+      <a data-url="https://www.shipeiguo.com/2021/09/02/example/" data-id="ckt4ezr1o000020uo9jcb2qqq" data-title="学习笔记" class="article-share-link">分享</a>
       
       
       
@@ -120,36 +120,42 @@
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/02/hello-world/">Shipeiguo</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start-11"><a href="#Quick-Start-11" class="headerlink" title="Quick Start 11"></a>Quick Start 11</h2><h3 id="Create-a-new-post-Spg"><a href="#Create-a-new-post-Spg" class="headerlink" title="Create a new post Spg"></a>Create a new post Spg</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h3 id="Mview-master"><a href="#Mview-master" class="headerlink" title="Mview-master"></a>Mview-master</h3><p>Reverse Engineer MView 3D File Format（逆向工程.Mview 3d文件格式）</p>
+<h4 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h4><p>在GitHub上搜索Mview ， 找到Python写的majimboo/mviewer插件。、<br><img src="C1FD43D4A9ED4A28A422F3AE66028757" alt="image"></p>
+<ul>
+<li>Mviewer GitHub URL(网址) : <a target="_blank" rel="noopener" href="https://github.com/majimboo/mviewer">https://github.com/majimboo/mviewer</a></li>
+</ul>
+<h4 id="模型提取（网页）"><a href="#模型提取（网页）" class="headerlink" title="模型提取（网页）"></a>模型提取（网页）</h4><p>在Artstation封面，若有左上角小方块图标的，就代表该页面有模型媒体文件。<br><img src="A695AD022B1940A3B5BB76A794009184" alt="image"><br>像这种中间有个圆圈，还有一个小三角的是GZ文件，我们一般是（提取）不了的。<br><img src="E76A850089C8477DA1545C9B221A6AE5" alt="image"><br>但是像 MarmosetToolbag3 link的Media文件是可以提取出来的（.Mview）<br><img src="7E7C5128557645E3B0546639DFE1B716" alt="image"><br>步骤：<br>刷新页面，直到所有网页都加载完毕（除了八猴媒体文件先不点开）<br>按F12调出网页源代码，点击Network<br><img src="0D9E37F494F14D63B3708B8FCB18889A" alt="image"><br>等所有页面加载完后，我们可以点击Clear，清除网页加载好的Log<br><img src="6427C70E8ED74AAF80EF9742E5D5E162" alt="image"><br>之后我们再点击加载Toolbag媒体文件，就能清晰地找到它加载的Log</p>
+<p>之后我们从Log中找到.mview的文件</p>
+<p>右键，并保存至本地<br>完成<br><img src="A4F79DEB1E5A4CE4AF39CCE7BA8A21EF" alt="image"></p>
+<h4 id="模型提取（本地）"><a href="#模型提取（本地）" class="headerlink" title="模型提取（本地）"></a>模型提取（本地）</h4><p>我们把GitHub下载好的Mview-Master解压，打开Noesis.exe。<br><img src="3AE5CB1739F047B6A0B3A75BB865EB11" alt="image"></p>
+<h4 id="模型导入"><a href="#模型导入" class="headerlink" title="模型导入"></a>模型导入</h4><p><img src="AA7EAC82828740878609705CD9F2C834" alt="image"><br>按步骤将模型导入（或直接拖拽进Noesis）</p>
+<ul>
+<li>蓝色区域为过滤器</li>
+<li>绿色区域为模型信息</li>
+<li>黄色区域为显示模式</li>
+</ul>
+<h4 id="模型导出"><a href="#模型导出" class="headerlink" title="模型导出"></a>模型导出</h4><p><img src="FEF8C78D448D4A7981967AC3934A3C18" alt="image"></p>
+<ul>
+<li>选择需导出的媒体文件，并点击Export即可<br><img src="0E0D020062F34417A0561977DB66764E" alt="image"></li>
+<li>若没有勾选导出文件</li>
+<li>它会提示你在列表视图中未选择可导出文件。是否要从正在预览的文件中导出</li>
+<li>选择是即可</li>
+</ul>
+<h4 id="软件简评"><a href="#软件简评" class="headerlink" title="软件简评"></a>软件简评</h4><p>优点：</p>
+<ul>
+<li>很明显，Mview 3d文件逆向工程这块做的还是很好的</li>
+<li>内置的Data Viewer也能便捷的参看模型信息<br><img src="7C3E6BD2B07C4971BB02FF35A4FE6B4A" alt="image"><br>缺点：</li>
+<li>Mview-master缺少Gloss通道，无法导出Glossiness光泽度贴图。</li>
+<li><img src="1113D2AD27F8402F960292E7C13138D2" alt="image"></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.shipeiguo.com/2021/09/02/hello-world/" data-id="ckt36nujh0001pcuobh69ftyi" data-title="Shipeiguo" class="article-share-link">分享</a>
+      <a data-url="https://www.shipeiguo.com/2021/09/02/hello-world/" data-id="ckt4ezr1z000120uodlg1e261" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -196,7 +202,7 @@
           </li>
         
           <li>
-            <a href="/2021/09/02/hello-world/">Shipeiguo</a>
+            <a href="/2021/09/02/hello-world/">(no title)</a>
           </li>
         
       </ul>
